@@ -609,6 +609,10 @@ function App() {
                 </div>
                 <div className="flex items-center">
                   <Mail className="h-5 w-5 mr-3" />
+                  <p>Email: architec7@gmail.com</p>
+                </div>
+                <div className="flex items-center">
+                  <Mail className="h-5 w-5 mr-3" />
                   <p>FAX: 046-271-0552</p>
                 </div>
                 <div className="flex items-center">
