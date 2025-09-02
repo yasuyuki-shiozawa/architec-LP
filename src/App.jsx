@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import './App.css';
 
 // 画像のインポート
-import soraImage from './assets/sora-hero.png';
+import mascotMain from './assets/こんにちは。僕に任せて.webp';
+import mascotMain2 from './assets/こんにちは。僕に任せて。2.webp';
+import mascotSuccess from './assets/成功.webp';
+import mascotEnthusiastic from './assets/張り切って頑張る.webp';
 import thermalImage from './assets/infrared-results.jpg';
 import droneImage from './assets/drone-inspection.jpg';
 import customer1 from './assets/customer1.jpg';
@@ -148,13 +151,17 @@ function App() {
                 <div className="text-sm font-semibold">受付時間：9:00〜18:00（年中無休）</div>
               </div>
 
-              {/* SORA画像の配置 */}
+              {/* キャラクター画像の配置 */}
               <div className="bg-white p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform">
                 <img 
-                  src={soraImage} 
-                  alt="赤外線建築診断の専門技術" 
-                  className="w-full h-auto rounded-lg"
+                  src={mascotMain} 
+                  alt="赤外線建築診断の専門キャラクター" 
+                  className="w-full h-auto rounded-lg max-w-sm mx-auto"
                 />
+                <div className="text-center mt-4">
+                  <div className="text-blue-900 font-bold text-lg">こんにちは！僕に任せて</div>
+                  <div className="text-blue-700 text-sm">25年の実績で確実に解決します</div>
+                </div>
               </div>
 
               {/* CTAボタン群 */}
@@ -377,13 +384,22 @@ function App() {
       </section>
 
       {/* お客様の声セクション */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-5xl font-black text-gray-800 mb-6">
               <span className="text-blue-600">お客様</span>の
-              <span className="text-yellow-600">喜びの声</span>
+              <span className="text-yellow-500">喜びの声</span>
             </h2>
+            
+            {/* キャラクター追加 */}
+            <div className="flex justify-center mb-8">
+              <img 
+                src={mascotSuccess} 
+                alt="成功を喜ぶキャラクター" 
+                className="w-32 h-32 object-contain"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -591,6 +607,15 @@ function App() {
             <p className="text-2xl text-gray-600 font-semibold">
               簡単5ステップで、確実な問題解決へ
             </p>
+            
+            {/* キャラクター追加 */}
+            <div className="flex justify-center mt-8 mb-8">
+              <img 
+                src={mascotEnthusiastic} 
+                alt="張り切って頑張るキャラクター" 
+                className="w-32 h-32 object-contain"
+              />
+            </div>
           </div>
 
           <div className="max-w-4xl mx-auto">
