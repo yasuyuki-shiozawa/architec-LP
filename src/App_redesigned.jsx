@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 
 // 画像のインポート
-import soraImage from './assets/sora-hero.png';
-import thermalImage from './assets/infrared-results.jpg';
-import droneImage from './assets/drone-inspection.jpg';
-import customer1 from './assets/customer1.jpg';
-import customer2 from './assets/customer2.jpg';
-import customer3 from './assets/customer3.jpg';
+import soraImage from './assets/20250901_1633_雨漏り防止専門_simple_compose_01k4230yajems8nc74v2ev981p.png';
+import thermalImage from './assets/x0lrfkbbewUs.jpg';
+import droneImage from './assets/gXmGvDhdlVt2.jpg';
+import customer1 from './assets/gXmGvDhdlVt2.jpg';
+import customer2 from './assets/gXmGvDhdlVt2.jpg';
+import customer3 from './assets/gXmGvDhdlVt2.jpg';
 
 function App() {
   const [formData, setFormData] = useState({
