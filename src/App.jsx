@@ -2,15 +2,15 @@ import React, { useState } from 'react';
 import './App.css';
 
 // 画像のインポート
-import mascotMain from './assets/こんにちは。僕に任せて.webp';
-import mascotMain2 from './assets/こんにちは。僕に任せて。2.webp';
-import mascotSuccess from './assets/成功.webp';
-import mascotEnthusiastic from './assets/張り切って頑張る.webp';
-import thermalImage from './assets/infrared-results.jpg';
-import droneImage from './assets/drone-inspection.jpg';
-import customer1 from './assets/customer1.jpg';
-import customer2 from './assets/customer2.jpg';
-import customer3 from './assets/customer3.jpg';
+import mascotMain from './assets/mascot.png';
+
+// 実際の赤外線診断画像
+import thermal1S from './assets/DJI_20240301104508_0004_S.JPG';
+import thermal1T from './assets/DJI_20240301104508_0004_T.JPG';
+import thermal2S from './assets/DJI_20240301104520_0005_S.JPG';
+import thermal2T from './assets/DJI_20240301104520_0005_T.JPG';
+import thermal3S from './assets/DJI_20240301104538_0006_S.JPG';
+import thermal3T from './assets/DJI_20240301104538_0006_T.JPG';
 
 function App() {
   const [formData, setFormData] = useState({
@@ -40,30 +40,13 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* ヒーローセクション - Zパターンレイアウト */}
-      <section className="relative min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
-        {/* 背景画像 - ビル群のシルエット */}
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-blue-900/50 to-transparent"></div>
-          <svg className="w-full h-full" viewBox="0 0 1200 800" fill="none">
-            {/* ビル群のシルエット */}
-            <rect x="0" y="400" width="150" height="400" fill="currentColor" opacity="0.3"/>
-            <rect x="150" y="300" width="120" height="500" fill="currentColor" opacity="0.25"/>
-            <rect x="270" y="350" width="100" height="450" fill="currentColor" opacity="0.3"/>
-            <rect x="370" y="250" width="140" height="550" fill="currentColor" opacity="0.2"/>
-            <rect x="510" y="320" width="110" height="480" fill="currentColor" opacity="0.25"/>
-            <rect x="620" y="280" width="130" height="520" fill="currentColor" opacity="0.3"/>
-            <rect x="750" y="200" width="160" height="600" fill="currentColor" opacity="0.2"/>
-            <rect x="910" y="350" width="120" height="450" fill="currentColor" opacity="0.25"/>
-            <rect x="1030" y="300" width="100" height="500" fill="currentColor" opacity="0.3"/>
-            <rect x="1130" y="400" width="70" height="400" fill="currentColor" opacity="0.25"/>
-          </svg>
-        </div>
-
-        {/* 装飾的な要素 */}
-        <div className="absolute top-20 left-20 w-32 h-32 bg-yellow-400 rounded-full opacity-10 animate-pulse"></div>
-        <div className="absolute top-40 right-32 w-24 h-24 bg-red-500 rounded-full opacity-10 animate-pulse delay-1000"></div>
-        <div className="absolute bottom-32 left-1/4 w-20 h-20 bg-blue-300 rounded-full opacity-10 animate-pulse delay-2000"></div>
+      {/* ヒーローセクション - 全画面表示 */}
+      <section className="relative min-h-screen overflow-hidden">
+        {/* 背景グラデーション */}
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+        
+        {/* 背景オーバーレイ - テキスト視認性のため */}
+        <div className="absolute inset-0 bg-blue-900/60"></div>
 
         <div className="relative z-10 container mx-auto px-6 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
@@ -82,16 +65,16 @@ function App() {
 
               {/* メインタイトル - 最大サイズ */}
               <div className="space-y-4">
-                <h1 className="text-6xl lg:text-7xl font-black text-white leading-tight">
+                <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight drop-shadow-2xl">
                   他社で
-                  <span className="text-yellow-400">止められなかった</span>
+                  <span className="text-yellow-300">止められなかった</span>
                   <br />
                   ビルの雨漏りを
-                  <span className="text-red-400">解決</span>
+                  <span className="text-red-300">解決</span>
                 </h1>
                 
                 {/* サブタイトル - 中サイズ */}
-                <p className="text-2xl lg:text-3xl font-bold text-blue-100">
+                <p className="text-xl lg:text-2xl font-bold text-white drop-shadow-xl leading-relaxed">
                   赤外線調査とドローン技術で
                   <br />
                   雨漏り箇所を正確に特定
@@ -109,7 +92,7 @@ function App() {
                   </div>
                 </div>
                 
-                <div className="bg-yellow-500 text-blue-900 px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
+                <div className="bg-yellow-200 text-blue-800 px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
                   <div className="flex items-center space-x-2">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -118,7 +101,7 @@ function App() {
                   </div>
                 </div>
                 
-                <div className="bg-blue-500 text-white px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
+                <div className="bg-blue-200 text-blue-800 px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
                   <div className="flex items-center space-x-2">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1v-6z" clipRule="evenodd" />
@@ -129,14 +112,14 @@ function App() {
               </div>
 
               {/* 緊急性の訴求 */}
-              <div className="bg-red-600 text-white p-6 rounded-lg shadow-xl">
+              <div className="bg-red-100 text-red-800 p-6 rounded-lg shadow-xl border border-red-200">
                 <div className="flex items-center space-x-3">
-                  <svg className="w-8 h-8 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-8 h-8 text-yellow-500" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                   </svg>
                   <div>
                     <div className="font-bold text-xl">雨漏りの放置は危険です</div>
-                    <div className="text-red-100">構造体の腐食・カビ発生・資産価値の大幅下落</div>
+                    <div className="text-red-600">構造体の腐食・カビ発生・資産価値の大幅下落</div>
                   </div>
                 </div>
               </div>
@@ -145,28 +128,31 @@ function App() {
             {/* 右カラム: ビジュアル + CTA（Zパターンの終点） */}
             <div className="space-y-8">
               {/* 電話番号 - 右上配置 */}
-              <div className="bg-yellow-400 text-blue-900 p-6 rounded-xl shadow-2xl text-center transform hover:scale-105 transition-transform">
+              <div className="bg-yellow-100 text-blue-800 p-6 rounded-xl shadow-2xl text-center transform hover:scale-105 transition-transform border border-yellow-200">
                 <div className="text-sm font-bold mb-2">今すぐ電話で相談</div>
                 <div className="text-4xl font-black mb-2">080-5530-0033</div>
                 <div className="text-sm font-semibold">受付時間：9:00〜18:00（年中無休）</div>
               </div>
 
               {/* キャラクター画像の配置 */}
-              <div className="bg-white p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform">
-                <img 
-                  src={mascotMain} 
-                  alt="赤外線建築診断の専門キャラクター" 
-                  className="w-full h-auto rounded-lg max-w-sm mx-auto"
-                />
-                <div className="text-center mt-4">
-                  <div className="text-blue-900 font-bold text-lg">こんにちは！僕に任せて</div>
-                  <div className="text-blue-700 text-sm">25年の実績で確実に解決します</div>
+              <div className="relative p-6 rounded-xl shadow-2xl transform hover:scale-105 transition-transform overflow-hidden bg-transparent">
+                {/* コンテンツ */}
+                <div className="relative z-10">
+                  <img 
+                    src={mascotMain} 
+                    alt="赤外線建築診断の専門キャラクター" 
+                    className="w-full h-auto rounded-lg max-w-sm mx-auto"
+                  />
+                  <div className="text-center mt-4">
+                    <div className="text-white font-bold text-lg drop-shadow-2xl">こんにちは！僕に任せて</div>
+                    <div className="text-white text-sm drop-shadow-xl">25年の実績で確実に解決します</div>
+                  </div>
                 </div>
               </div>
 
               {/* CTAボタン群 */}
               <div className="space-y-4">
-                <button className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-lg transform hover:scale-105 transition-all">
+                <button className="w-full bg-red-300 hover:bg-red-400 text-red-900 font-bold py-4 px-8 rounded-xl text-xl shadow-lg transform hover:scale-105 transition-all">
                   <div className="flex items-center justify-center space-x-2">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
@@ -175,7 +161,7 @@ function App() {
                   </div>
                 </button>
                 
-                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-lg transform hover:scale-105 transition-all">
+                <button className="w-full bg-blue-300 hover:bg-blue-400 text-blue-900 font-bold py-4 px-8 rounded-xl text-xl shadow-lg transform hover:scale-105 transition-all">
                   <div className="flex items-center justify-center space-x-2">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -190,49 +176,49 @@ function App() {
       </section>
 
       {/* 問題提起セクション */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
-              こんな<span className="text-red-600">お悩み</span>ありませんか？
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
+              こんな<span className="text-red-400">お悩み</span>ありませんか？
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-red-50 border-l-4 border-red-500 p-6 rounded-lg shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div className="bg-red-50 border-l-4 border-red-300 p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <div className="bg-red-500 text-white p-3 rounded-full mr-4">
+                <div className="bg-red-300 text-red-800 p-3 rounded-full mr-4">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-red-700">他社で修理したが再発</h3>
+                <h3 className="text-xl font-bold text-red-600">他社で修理したが再発</h3>
               </div>
-              <p className="text-gray-700">3回修理しても雨漏りが止まらない。根本原因が特定できていない可能性があります。</p>
+              <p className="text-sm text-gray-700 leading-relaxed">3回修理しても雨漏りが止まらない。根本原因が特定できていない可能性があります。</p>
             </div>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-6 rounded-lg shadow-lg">
+            <div className="bg-yellow-50 border-l-4 border-yellow-300 p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <div className="bg-yellow-500 text-white p-3 rounded-full mr-4">
+                <div className="bg-yellow-300 text-yellow-800 p-3 rounded-full mr-4">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-yellow-700">工事費用が高額</h3>
+                <h3 className="text-xl font-bold text-yellow-600">他社で修理したが再発</h3>
               </div>
-              <p className="text-gray-700">原因箇所が特定できず、広範囲の修繕で費用が膨らんでしまう。</p>
+              <p className="text-sm text-gray-700 leading-relaxed">漏水原因が特定できていない工事は何度工事をしてもいくらお金をかけても何年たっても雨漏りは止まりません。</p>
             </div>
 
-            <div className="bg-blue-50 border-l-4 border-blue-500 p-6 rounded-lg shadow-lg">
+            <div className="bg-blue-50 border-l-4 border-blue-300 p-6 rounded-lg shadow-lg">
               <div className="flex items-center mb-4">
-                <div className="bg-blue-500 text-white p-3 rounded-full mr-4">
+                <div className="bg-blue-300 text-blue-800 p-3 rounded-full mr-4">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold text-blue-700">調査に時間がかかる</h3>
+                <h3 className="text-xl font-bold text-blue-600">調査に時間がかかる</h3>
               </div>
-              <p className="text-gray-700">足場設置や破壊調査で営業に支障。迅速な原因特定が必要。</p>
+              <p className="text-sm text-gray-700 leading-relaxed">足場設置や破壊調査で営業に支障。迅速な原因特定が必要。</p>
             </div>
           </div>
         </div>
@@ -241,7 +227,7 @@ function App() {
       {/* 解決策セクション */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-5xl font-black text-blue-900 mb-6">
               <span className="text-red-600">赤外線診断</span>で
               <span className="text-yellow-600">すべて解決</span>
@@ -254,7 +240,7 @@ function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={thermalImage} 
+                src={thermal1T} 
                 alt="赤外線調査による雨漏り箇所の特定" 
                 className="w-full h-auto rounded-xl shadow-2xl"
               />
@@ -274,10 +260,10 @@ function App() {
               <div className="bg-white p-6 rounded-xl shadow-lg border-l-4 border-yellow-500">
                 <h3 className="text-2xl font-bold text-yellow-600 mb-4">
                   <span className="bg-yellow-100 px-3 py-1 rounded-full text-sm mr-3">02</span>
-                  工事費を大幅削減
+                  確実な雨漏り箇所特定
                 </h3>
                 <p className="text-gray-700 text-lg">
-                  ピンポイント修繕で無駄な工事を排除。従来の半分以下の費用で根本解決。足場代も不要でコスト削減効果は絶大。
+                  漏水原因が特定できていない工事は何度工事をしてもいくらお金をかけても何年たっても雨漏りは止まりません。科学的根拠に基づいた確実な原因特定で根本解決を実現。
                 </p>
               </div>
 
@@ -296,10 +282,10 @@ function App() {
       </section>
 
       {/* ドローン調査セクション */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               <span className="text-blue-600">ドローン調査</span>の
               <span className="text-yellow-600">圧倒的メリット</span>
             </h2>
@@ -340,7 +326,7 @@ function App() {
             
             <div>
               <img 
-                src={droneImage} 
+                src={thermal2S} 
                 alt="ドローンによる安全で効率的な調査" 
                 className="w-full h-auto rounded-xl shadow-2xl"
               />
@@ -349,11 +335,246 @@ function App() {
         </div>
       </section>
 
+      {/* 実際の赤外線診断事例セクション */}
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-gray-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
+              <span className="text-red-600">実際の</span>
+              <span className="text-blue-600">赤外線診断事例</span>
+            </h2>
+            <p className="text-2xl text-gray-600 font-semibold">
+              DJIドローンによる実際の調査画像をご覧ください
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* 事例1 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-2 gap-2 p-4">
+                <div>
+                  <img 
+                    src={thermal1S} 
+                    alt="可視光画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-gray-600 mt-2">可視光画像</p>
+                </div>
+                <div>
+                  <img 
+                    src={thermal1T} 
+                    alt="赤外線画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-red-600 mt-2">赤外線画像</p>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-gray-800 mb-2">屋根部分の漏水検出</h3>
+                <p className="text-sm text-gray-600">赤外線画像で温度差により水の浸入箇所を明確に特定</p>
+              </div>
+            </div>
+
+            {/* 事例2 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-2 gap-2 p-4">
+                <div>
+                  <img 
+                    src={thermal2S} 
+                    alt="可視光画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-gray-600 mt-2">可視光画像</p>
+                </div>
+                <div>
+                  <img 
+                    src={thermal2T} 
+                    alt="赤外線画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-red-600 mt-2">赤外線画像</p>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-gray-800 mb-2">外壁の水分浸透</h3>
+                <p className="text-sm text-gray-600">目視では分からない水分の浸透を赤外線で可視化</p>
+              </div>
+            </div>
+
+            {/* 事例3 */}
+            <div className="bg-white rounded-xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-2 gap-2 p-4">
+                <div>
+                  <img 
+                    src={thermal3S} 
+                    alt="可視光画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-gray-600 mt-2">可視光画像</p>
+                </div>
+                <div>
+                  <img 
+                    src={thermal3T} 
+                    alt="赤外線画像" 
+                    className="w-full h-32 object-cover rounded-lg"
+                  />
+                  <p className="text-center text-sm font-semibold text-red-600 mt-2">赤外線画像</p>
+                </div>
+              </div>
+              <div className="p-4">
+                <h3 className="font-bold text-lg text-gray-800 mb-2">建物接合部の問題</h3>
+                <p className="text-sm text-gray-600">構造的な問題箇所を温度変化で正確に特定</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 実績セクション */}
+      <section className="py-24 bg-gradient-to-br from-blue-50 to-blue-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
+              <span className="text-red-600">実際の診断事例</span>
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              DJIドローンと赤外線カメラで撮影した実際の診断画像をご覧ください。
+              温度差により問題箇所が一目瞭然で特定できます。
+            </p>
+          </div>
+
+          <div className="space-y-16">
+            {/* 事例1 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative">
+                  <img 
+                    src={thermal1S} 
+                    alt="通常画像 - 建物外観" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
+                    通常画像
+                  </div>
+                </div>
+                <div className="relative">
+                  <img 
+                    src={thermal1T} 
+                    alt="赤外線画像 - 温度分布表示" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    赤外線画像
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">建物外壁の温度分布診断</h3>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="text-center">
+                    <div className="w-6 h-6 bg-red-500 rounded-full mx-auto mb-2"></div>
+                    <p className="font-semibold text-red-600">高温部分</p>
+                    <p className="text-sm text-gray-600">熱の蓄積・漏れ箇所</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-6 h-6 bg-yellow-500 rounded-full mx-auto mb-2"></div>
+                    <p className="font-semibold text-yellow-600">中温部分</p>
+                    <p className="text-sm text-gray-600">注意が必要な箇所</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                    <p className="font-semibold text-blue-600">低温部分</p>
+                    <p className="text-sm text-gray-600">正常な温度範囲</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 事例2 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative">
+                  <img 
+                    src={thermal2S} 
+                    alt="通常画像 - 屋上設備" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
+                    通常画像
+                  </div>
+                </div>
+                <div className="relative">
+                  <img 
+                    src={thermal2T} 
+                    alt="赤外線画像 - 屋上の温度分布" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    赤外線画像
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">屋上防水層の劣化診断</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  通常の目視では分からない防水層の劣化や水の浸入箇所も、赤外線画像では明確に確認できます。
+                  オレンジ色の部分は温度が高く、水分の蓄積や断熱性能の低下を示しています。
+                </p>
+              </div>
+            </div>
+
+            {/* 事例3 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative">
+                  <img 
+                    src={thermal3S} 
+                    alt="通常画像 - 建物側面" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
+                    通常画像
+                  </div>
+                </div>
+                <div className="relative">
+                  <img 
+                    src={thermal3T} 
+                    alt="赤外線画像 - 側面の温度分析" 
+                    className="w-full h-80 lg:h-96 object-cover"
+                  />
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    赤外線画像
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">外壁クラック部分の詳細診断</h3>
+                <p className="text-gray-600 leading-relaxed">
+                  外壁のクラック周辺の温度変化を詳細に分析。青色の低温部分と黄色の高温部分の境界線が、
+                  実際の水の浸入経路を示しており、修繕すべき正確な箇所を特定できます。
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="text-center mt-16">
+            <div className="bg-blue-600 text-white p-8 rounded-2xl max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">赤外線診断の科学的根拠</h3>
+              <p className="text-lg leading-relaxed">
+                赤外線カメラは0.1℃の温度差まで検出可能。水分の蓄積や断熱不良箇所は周囲と温度差が生じるため、
+                目視では発見できない問題箇所も確実に特定できます。これにより、推測ではなく科学的根拠に基づいた
+                正確な診断と効果的な修繕が可能になります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 実績セクション */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               <span className="text-red-600">25年</span>の実績が
               <span className="text-blue-600">信頼の証</span>
             </h2>
@@ -386,8 +607,8 @@ function App() {
       {/* お客様の声セクション */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               <span className="text-blue-600">お客様</span>の
               <span className="text-yellow-500">喜びの声</span>
             </h2>
@@ -395,7 +616,7 @@ function App() {
             {/* キャラクター追加 */}
             <div className="flex justify-center mb-8">
               <img 
-                src={mascotSuccess} 
+                src={mascotMain} 
                 alt="成功を喜ぶキャラクター" 
                 className="w-32 h-32 object-contain"
               />
@@ -405,11 +626,9 @@ function App() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-blue-50 p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-6">
-                <img 
-                  src={customer1} 
-                  alt="田中様" 
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <div className="w-16 h-16 rounded-full bg-blue-200 flex items-center justify-center mr-4">
+                  <span className="text-blue-800 font-bold text-xl">田</span>
+                </div>
                 <div>
                   <div className="font-bold text-lg text-gray-800">田中様</div>
                   <div className="text-gray-600">オフィスビルオーナー</div>
@@ -425,11 +644,9 @@ function App() {
 
             <div className="bg-yellow-50 p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-6">
-                <img 
-                  src={customer2} 
-                  alt="佐藤様" 
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <div className="w-16 h-16 rounded-full bg-yellow-200 flex items-center justify-center mr-4">
+                  <span className="text-yellow-800 font-bold text-xl">佐</span>
+                </div>
                 <div>
                   <div className="font-bold text-lg text-gray-800">佐藤様</div>
                   <div className="text-gray-600">商業ビルオーナー</div>
@@ -445,11 +662,9 @@ function App() {
 
             <div className="bg-green-50 p-8 rounded-xl shadow-lg">
               <div className="flex items-center mb-6">
-                <img 
-                  src={customer3} 
-                  alt="山田様" 
-                  className="w-16 h-16 rounded-full object-cover mr-4"
-                />
+                <div className="w-16 h-16 rounded-full bg-green-200 flex items-center justify-center mr-4">
+                  <span className="text-green-800 font-bold text-xl">山</span>
+                </div>
                 <div>
                   <div className="font-bold text-lg text-gray-800">山田様</div>
                   <div className="text-gray-600">マンションオーナー</div>
@@ -469,13 +684,13 @@ function App() {
       {/* 動画セクション */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-5xl font-black text-blue-900 mb-6">
               <span className="text-red-600">専門家</span>による
               <span className="text-yellow-600">技術解説</span>
             </h2>
             <p className="text-2xl text-blue-700 font-semibold">
-              20年の経験を持つ金澤氏が赤外線診断技術を詳しく解説
+              25年の経験を持つ金澤氏が赤外線診断技術を詳しく解説
             </p>
           </div>
 
@@ -498,7 +713,7 @@ function App() {
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
-                      20年の経験に基づく専門的な診断技術
+                      25年の実績に基づく専門的な診断技術
                     </li>
                     <li className="flex items-start">
                       <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
@@ -519,7 +734,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-blue-900 mb-4">解説者プロフィール</h3>
                   <div className="bg-blue-50 p-6 rounded-lg">
                     <div className="font-bold text-lg text-blue-900 mb-2">金澤 氏</div>
-                    <div className="text-blue-700 mb-3">赤外線建築診断士 / 20年の実績</div>
+                    <div className="text-blue-700 mb-3">赤外線建築診断士 / 25年の実績</div>
                     <p className="text-gray-700 text-sm leading-relaxed">
                       「建物の健康状態を正確に把握し、お客様の大切な資産を守ることが私たちの使命です。
                       長年の経験と最新技術を組み合わせ、他社では解決できない問題も確実に解決いたします。」
@@ -539,10 +754,10 @@ function App() {
       </section>
 
       {/* 他社との違いセクション */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               なぜ<span className="text-red-600">他社で止められなかった</span>
               <br />
               雨漏りを<span className="text-blue-600">解決</span>できるのか？
@@ -579,8 +794,8 @@ function App() {
                   <div className="bg-yellow-600 text-white w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                     <span className="text-2xl font-bold">2</span>
                   </div>
-                  <h4 className="font-bold text-yellow-900 mb-2">ピンポイント修繕</h4>
-                  <p className="text-sm text-gray-600">無駄な工事を完全排除</p>
+                  <h4 className="font-bold text-yellow-900 mb-2">確実な修繕</h4>
+                  <p className="text-sm text-gray-600">科学的根拠に基づいた適切な工事</p>
                 </div>
                 
                 <div className="text-center">
@@ -599,8 +814,8 @@ function App() {
       {/* 調査の流れセクション */}
       <section className="py-20 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               <span className="text-blue-600">無料見積</span>までの
               <span className="text-yellow-600">流れ</span>
             </h2>
@@ -611,7 +826,7 @@ function App() {
             {/* キャラクター追加 */}
             <div className="flex justify-center mt-8 mb-8">
               <img 
-                src={mascotEnthusiastic} 
+                src={mascotMain} 
                 alt="張り切って頑張るキャラクター" 
                 className="w-32 h-32 object-contain"
               />
@@ -636,13 +851,13 @@ function App() {
                 {
                   step: "03",
                   title: "雨漏り箇所の修繕御見積書の発行", 
-                  description: "調査結果を基に、ピンポイント修繕の詳細見積書を作成。無駄な工事は一切含めません。",
+                  description: "調査結果を基に、確実な修繕の詳細見積書を作成。科学的根拠に基づいた適切な工事内容をご提案します。",
                   color: "blue"
                 },
                 {
                   step: "04",
                   title: "工事契約",
-                  description: "お見積り額にご納得いただけない場合は、工事契約を締結しなくても大丈夫です。調査結果はお渡しします。",
+                  description: "調査結果と見積内容をご検討いただき、ご納得いただけましたら工事契約を締結いたします。",
                   color: "green"
                 },
                 {
@@ -668,10 +883,10 @@ function App() {
       </section>
 
       {/* 最新機材セクション */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-white">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-5xl font-black text-gray-800 mb-6">
+          <div className="text-center mb-20">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
               <span className="text-blue-600">最新機材</span>で
               <span className="text-red-600">精密診断</span>
             </h2>
@@ -720,7 +935,7 @@ function App() {
       {/* 問い合わせフォームセクション */}
       <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 to-blue-800">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-20">
             <h2 className="text-5xl font-black text-white mb-6">
               <span className="text-yellow-400">無料見積</span>
               お申し込み

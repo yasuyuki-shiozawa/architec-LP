@@ -118,3 +118,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* マスコット背景用のカスタムクラス */
+.mascot-background {
+  background-image: url('./assets/mascot-background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
