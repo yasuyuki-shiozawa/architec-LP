@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './App.css';
-
 // 画像のインポート
 import mascotMain from './assets/mascot.png';
 
@@ -857,7 +856,7 @@ function App() {
                 {
                   step: "04",
                   title: "工事契約",
-                  description: "お見積り額にご納得いただけない場合は、工事契約を締結しなくても大丈夫です。調査結果はお渡しします。",
+                  description: "調査結果と見積内容をご検討いただき、ご納得いただけましたら工事契約を締結いたします。",
                   color: "green"
                 },
                 {
