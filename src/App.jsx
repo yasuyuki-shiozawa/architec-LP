@@ -3,7 +3,7 @@ import './App.css';
 
 // 画像のインポート
 import mascotMain from './assets/mascot.png';
-import mascotBackground from './assets/mascot-background.png';
+import mascotBackground from './assets/mascot-background-bright.png';
 
 // 実際の赤外線診断画像
 import thermal1S from './assets/DJI_20240301104508_0004_S.JPG';
