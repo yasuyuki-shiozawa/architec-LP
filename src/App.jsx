@@ -51,8 +51,7 @@ function App() {
           backgroundRepeat: 'no-repeat'
         }}></div>
         
-        {/* 背景オーバーレイ - テキスト視認性のため */}
-        <div className="absolute inset-0 bg-blue-900/60"></div>
+
 
         <div className="relative z-10 container mx-auto px-6 py-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center min-h-screen">
