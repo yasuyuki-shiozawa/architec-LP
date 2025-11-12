@@ -3,6 +3,7 @@ import './App.css';
 
 // 画像のインポート
 import mascotMain from './assets/mascot.png';
+import mascotBackground from './assets/mascot-background.png';
 
 // 実際の赤外線診断画像
 import thermal1S from './assets/DJI_20240301104508_0004_S.JPG';
@@ -42,8 +43,13 @@ function App() {
     <div className="min-h-screen bg-gray-50">
       {/* ヒーローセクション - 全画面表示 */}
       <section className="relative min-h-screen overflow-hidden">
-        {/* 背景グラデーション */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-blue-700 to-blue-800"></div>
+        {/* 背景画像 */}
+        <div className="absolute inset-0" style={{
+          backgroundImage: `url(${mascotBackground})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}></div>
         
         {/* 背景オーバーレイ - テキスト視認性のため */}
         <div className="absolute inset-0 bg-blue-900/60"></div>
