@@ -440,136 +440,222 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
-              <span className="text-red-600">実際の診断事例</span>
+              <span className="text-red-600">A様邸</span> 43年間の雨漏り
+              <span className="text-blue-600">完全解決事例</span>
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              DJIドローンと赤外線カメラで撮影した実際の診断画像をご覧ください。
-              温度差により問題箇所が一目瞭然で特定できます。
+            <p className="text-xl text-gray-600 max-w-4xl mx-auto">
+              新築から43年間、あらゆる防水工事を実施しても止まらなかった雨漏りを、
+              赤外線診断により根本原因を特定し、完全に解決した実際の事例をご紹介します。
             </p>
+            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mt-8 max-w-4xl mx-auto">
+              <p className="text-red-800 font-semibold">
+                建築業者・設計士・現場監督・塗装業者・板金業者など、あらゆる専門業者が対応しても
+                解決できなかった43年間の問題を、赤外線技術で一発解決
+              </p>
+            </div>
           </div>
 
           <div className="space-y-16">
-            {/* 事例1 */}
+            {/* A画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative">
-                  <img 
-                    src={thermal1S} 
-                    alt="通常画像 - 建物外観" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
-                    通常画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
+                    <div className="text-center text-white p-8">
+                      <div className="text-6xl mb-4">🔍</div>
+                      <p className="text-lg font-semibold">赤外線画像</p>
+                      <p className="text-sm mt-2">青い部分が雨水蓄積箇所</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工前
                   </div>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={thermal1T} 
-                    alt="赤外線画像 - 温度分布表示" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    赤外線画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <div className="text-center text-green-800 p-8">
+                      <div className="text-6xl mb-4">✅</div>
+                      <p className="text-lg font-semibold">施工後</p>
+                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工後
                   </div>
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">建物外壁の温度分布診断</h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                  <div className="text-center">
-                    <div className="w-6 h-6 bg-red-500 rounded-full mx-auto mb-2"></div>
-                    <p className="font-semibold text-red-600">高温部分</p>
-                    <p className="text-sm text-gray-600">熱の蓄積・漏れ箇所</p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">A箇所：階段明り取りサッシ</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">施工前の問題</h4>
+                    <p className="text-red-700">雨が降るたびに10リットルの雨水が溜まる深刻な状況</p>
                   </div>
-                  <div className="text-center">
-                    <div className="w-6 h-6 bg-yellow-500 rounded-full mx-auto mb-2"></div>
-                    <p className="font-semibold text-yellow-600">中温部分</p>
-                    <p className="text-sm text-gray-600">注意が必要な箇所</p>
-                  </div>
-                  <div className="text-center">
-                    <div className="w-6 h-6 bg-blue-500 rounded-full mx-auto mb-2"></div>
-                    <p className="font-semibold text-blue-600">低温部分</p>
-                    <p className="text-sm text-gray-600">正常な温度範囲</p>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">施工後の結果</h4>
+                    <p className="text-green-700">雨水の浸入が完全に停止し、正常な状態を維持</p>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* 事例2 */}
+            {/* B画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative">
-                  <img 
-                    src={thermal2S} 
-                    alt="通常画像 - 屋上設備" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
-                    通常画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-orange-200 to-yellow-100 flex items-center justify-center">
+                    <div className="text-center text-orange-800 p-8">
+                      <div className="text-6xl mb-4">🦠</div>
+                      <p className="text-lg font-semibold">カビ発生確認</p>
+                      <p className="text-sm mt-2">壁内雨水蓄積（目視不可）</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工前
                   </div>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={thermal2T} 
-                    alt="赤外線画像 - 屋上の温度分布" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    赤外線画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <div className="text-center text-green-800 p-8">
+                      <div className="text-6xl mb-4">✅</div>
+                      <p className="text-lg font-semibold">施工後</p>
+                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工後
                   </div>
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">屋上防水層の劣化診断</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  通常の目視では分からない防水層の劣化や水の浸入箇所も、赤外線画像では明確に確認できます。
-                  オレンジ色の部分は温度が高く、水分の蓄積や断熱性能の低下を示しています。
-                </p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">B箇所：壁内部の雨水蓄積</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">施工前の問題</h4>
+                    <p className="text-red-700">カビは確認できるが、壁内の雨水蓄積は目視では発見不可能</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">施工後の結果</h4>
+                    <p className="text-green-700">赤外線診断により原因を特定し、完全に雨水浸入を阻止</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* 事例3 */}
+            {/* C画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
               <div className="grid grid-cols-1 lg:grid-cols-2">
                 <div className="relative">
-                  <img 
-                    src={thermal3S} 
-                    alt="通常画像 - 建物側面" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-blue-600 text-white px-4 py-2 rounded-full font-bold">
-                    通常画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
+                    <div className="text-center text-white p-8">
+                      <div className="text-6xl mb-4">🏗️</div>
+                      <p className="text-lg font-semibold">鉄骨伝いの雨水</p>
+                      <p className="text-sm mt-2">構造部材への水分浸透</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工前
                   </div>
                 </div>
                 <div className="relative">
-                  <img 
-                    src={thermal3T} 
-                    alt="赤外線画像 - 側面の温度分析" 
-                    className="w-full h-80 lg:h-96 object-cover"
-                  />
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    赤外線画像
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <div className="text-center text-green-800 p-8">
+                      <div className="text-6xl mb-4">✅</div>
+                      <p className="text-lg font-semibold">施工後</p>
+                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工後
                   </div>
                 </div>
               </div>
               <div className="p-8">
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">外壁クラック部分の詳細診断</h3>
-                <p className="text-gray-600 leading-relaxed">
-                  外壁のクラック周辺の温度変化を詳細に分析。青色の低温部分と黄色の高温部分の境界線が、
-                  実際の水の浸入経路を示しており、修繕すべき正確な箇所を特定できます。
-                </p>
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">C箇所：鉄骨構造部の雨水蓄積</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">施工前の問題</h4>
+                    <p className="text-red-700">鉄骨を伝って雨水が蓄積し、構造体の腐食リスクが深刻化</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">施工後の結果</h4>
+                    <p className="text-green-700">構造部材への水分浸透を完全に遮断し、建物の安全性を確保</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* D画像事例 */}
+            <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+              <div className="grid grid-cols-1 lg:grid-cols-2">
+                <div className="relative">
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
+                    <div className="text-center text-purple-800 p-8">
+                      <div className="text-6xl mb-4">🧱</div>
+                      <p className="text-lg font-semibold">ALC内雨水蓄積</p>
+                      <p className="text-sm mt-2">軽量コンクリート内部浸水</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工前
+                  </div>
+                </div>
+                <div className="relative">
+                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
+                    <div className="text-center text-green-800 p-8">
+                      <div className="text-6xl mb-4">✅</div>
+                      <p className="text-lg font-semibold">施工後</p>
+                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
+                    </div>
+                  </div>
+                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
+                    施工後
+                  </div>
+                </div>
+              </div>
+              <div className="p-8">
+                <h3 className="text-2xl font-bold text-gray-800 mb-4">D箇所：ALC（軽量コンクリート）内部</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="bg-red-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-red-800 mb-2">施工前の問題</h4>
+                    <p className="text-red-700">ALC内部に雨水が浸透し、建材の劣化と強度低下が進行</p>
+                  </div>
+                  <div className="bg-green-50 p-4 rounded-lg">
+                    <h4 className="font-semibold text-green-800 mb-2">施工後の結果</h4>
+                    <p className="text-green-700">ALC内部への水分浸入を完全に防止し、建材の健全性を回復</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
           <div className="text-center mt-16">
-            <div className="bg-blue-600 text-white p-8 rounded-2xl max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">赤外線診断の科学的根拠</h3>
-              <p className="text-lg leading-relaxed">
-                赤外線カメラは0.1℃の温度差まで検出可能。水分の蓄積や断熱不良箇所は周囲と温度差が生じるため、
-                目視では発見できない問題箇所も確実に特定できます。これにより、推測ではなく科学的根拠に基づいた
-                正確な診断と効果的な修繕が可能になります。
-              </p>
+            <div className="bg-gradient-to-r from-red-600 to-blue-600 text-white p-8 rounded-2xl max-w-5xl mx-auto">
+              <h3 className="text-3xl font-bold mb-6">43年間解決できなかった雨漏りが完全解決</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                <div>
+                  <h4 className="text-xl font-semibold mb-3">従来の限界</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 建築業者・設計士による調査</li>
+                    <li>• 現場監督・塗装業者の点検</li>
+                    <li>• 板金業者の防水工事</li>
+                    <li>• 銅による外壁カバー工法</li>
+                    <li>• 何度もの防水施工</li>
+                  </ul>
+                  <p className="text-red-200 font-semibold mt-4">→ 43年間解決できず</p>
+                </div>
+                <div>
+                  <h4 className="text-xl font-semibold mb-3">赤外線診断の威力</h4>
+                  <ul className="space-y-2 text-sm">
+                    <li>• 0.04℃単位の精密温度測定</li>
+                    <li>• 目に見えない雨水滞留を画像化</li>
+                    <li>• 科学的根拠に基づく原因特定</li>
+                    <li>• ピンポイント修繕で根本解決</li>
+                    <li>• 全箇所で雨水浸入完全停止</li>
+                  </ul>
+                  <p className="text-green-200 font-semibold mt-4">→ 一発で完全解決</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
