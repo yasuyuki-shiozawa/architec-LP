@@ -70,7 +70,7 @@ function App() {
                   <span className="text-2xl font-black text-blue-900">有限会社アーキテック</span>
                 </div>
                 <div className="bg-yellow-400 px-4 py-2 rounded-full">
-                  <span className="text-sm font-bold text-blue-900">25年の実績</span>
+                  <span className="text-sm font-bold text-blue-900">2000年開始 25年の実績</span>
                 </div>
               </div>
 
@@ -99,7 +99,7 @@ function App() {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span className="font-bold text-lg">25年の実績</span>
+                    <span className="font-bold text-lg">2000年開始 25年の実績</span>
                   </div>
                 </div>
                 
@@ -108,7 +108,7 @@ function App() {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
-                    <span className="font-bold text-lg">無料見積</span>
+                    <span className="font-bold text-lg">弊社施工の場合 無料赤外線調査実施</span>
                   </div>
                 </div>
                 
@@ -120,6 +120,11 @@ function App() {
                     <span className="font-bold text-lg">県央地区専門</span>
                   </div>
                 </div>
+              </div>
+
+              {/* 対象建物の明記 */}
+              <div className="bg-blue-50 text-blue-800 p-4 rounded-lg shadow-lg border border-blue-200 text-center">
+                <div className="text-sm font-semibold">調査対象は鉄筋コンクリート造・ALC造のみです。</div>
               </div>
 
               {/* 緊急性の訴求 */}
@@ -156,7 +161,7 @@ function App() {
                   />
                   <div className="text-center mt-4">
                     <div className="text-white font-bold text-lg drop-shadow-2xl">こんにちは！僕に任せて</div>
-                    <div className="text-white text-sm drop-shadow-xl">25年の実績で確実に解決します</div>
+                    <div className="text-white text-sm drop-shadow-xl">2000年開始 25年の実績で確実に解決します</div>
                   </div>
                 </div>
               </div>
@@ -177,7 +182,7 @@ function App() {
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                     </svg>
-                    <span>無料見積フォームへ</span>
+                    <span>無料赤外線調査フォームへ</span>
                   </div>
                 </button>
               </div>
@@ -244,7 +249,7 @@ function App() {
               <span className="text-yellow-600">すべて解決</span>
             </h2>
             <p className="text-2xl text-blue-700 font-semibold">
-              25年の実績と最新技術で、他社で止められなかった雨漏りも確実に解決
+              2000年開始 25年の実績と最新技術で、他社で止められなかった雨漏りも確実に解決
             </p>
           </div>
 
@@ -683,7 +688,7 @@ function App() {
                 </div>
               </div>
               <p className="text-gray-700 text-lg leading-relaxed">
-                「他社で3回修理しても止まらなかった雨漏りが、アーキテックさんの赤外線調査で1回で完全に解決しました。25年の実績は伊達じゃないですね。」
+                「他社で3回修理しても止まらなかった雨漏りが、アーキテックさんの赤外線調査で1回で完全に解決しました。2000年開始 25年の実績は伊達じゃないですね。」
               </p>
             </div>
 
@@ -758,7 +763,7 @@ function App() {
                   <ul className="space-y-3 text-gray-700">
                     <li className="flex items-start">
                       <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
-                      25年の実績に基づく専門的な診断技術
+                      2000年開始 25年の実績に基づく専門的な診断技術
                     </li>
                     <li className="flex items-start">
                       <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
@@ -779,7 +784,7 @@ function App() {
                   <h3 className="text-2xl font-bold text-blue-900 mb-4">解説者プロフィール</h3>
                   <div className="bg-blue-50 p-6 rounded-lg">
                     <div className="font-bold text-lg text-blue-900 mb-2">金澤 氏</div>
-                    <div className="text-blue-700 mb-3">赤外線建築診断士 / 25年の実績</div>
+                    <div className="text-blue-700 mb-3">赤外線建築診断士 / 2000年開始 25年の実績</div>
                     <p className="text-gray-700 text-sm leading-relaxed">
                       「建物の健康状態を正確に把握し、お客様の大切な資産を守ることが私たちの使命です。
                       長年の経験と最新技術を組み合わせ、他社では解決できない問題も確実に解決いたします。」
@@ -861,7 +866,7 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
-              <span className="text-blue-600">無料見積</span>までの
+              <span className="text-blue-600">無料赤外線調査</span>までの
               <span className="text-yellow-600">流れ</span>
             </h2>
             <p className="text-2xl text-gray-600 font-semibold">
@@ -961,7 +966,11 @@ function App() {
               <div className="space-y-4 text-gray-700">
                 <div className="flex items-center">
                   <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">精度</span>
-                  <span>0.1℃の温度差を検出</span>
+                  <span>0.04℃単位の温度測定により目に見えない雨水滞留を画像化</span>
+                </div>
+                <div className="flex items-center mt-2">
+                  <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">従来手法</span>
+                  <span>感・経験・散水調査で解らなかった漏水も特定可能</span>
                 </div>
                 <div className="flex items-center">
                   <span className="bg-red-500 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">可視化</span>
@@ -982,7 +991,7 @@ function App() {
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-black text-white mb-6">
-              <span className="text-yellow-400">無料見積</span>
+              <span className="text-yellow-400">無料赤外線調査</span>
               お申し込み
             </h2>
             <p className="text-2xl text-blue-100 font-semibold">
@@ -1137,7 +1146,7 @@ function App() {
                     type="submit"
                     className="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-xl text-xl shadow-lg transform hover:scale-105 transition-all"
                   >
-                    無料見積を申し込む
+                    無料赤外線調査を申し込む
                   </button>
                 </form>
               </div>
@@ -1153,7 +1162,7 @@ function App() {
             <div>
               <h3 className="text-2xl font-bold mb-4">有限会社アーキテック</h3>
               <p className="text-gray-300 mb-4">
-                神奈川県県央地区の赤外線建築診断専門会社。25年の実績と最新技術で、
+                神奈川県県央地区の赤外線建築診断専門会社。2000年開始 25年の実績と最新技術で、
                 他社で解決できなかった雨漏り問題も確実に解決いたします。
               </p>
             </div>
