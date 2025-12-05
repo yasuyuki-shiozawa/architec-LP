@@ -13,6 +13,12 @@ import thermal2T from './assets/DJI_20240301104520_0005_T.JPG';
 import thermal3S from './assets/DJI_20240301104538_0006_S.JPG';
 import thermal3T from './assets/DJI_20240301104538_0006_T.JPG';
 
+// A様邸施工事例の実際の写真
+import caseABeforeAfter from './assets/case_a_before_after.png';
+import caseBBeforeAfter from './assets/case_b_before_after.png';
+import caseCBeforeAfter from './assets/case_c_before_after.png';
+import caseDBeforeAfter from './assets/case_d_before_after.png';
+
 function App() {
   const [formData, setFormData] = useState({
     name: '',
@@ -458,30 +464,17 @@ function App() {
           <div className="space-y-16">
             {/* A画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-blue-900 to-blue-700 flex items-center justify-center">
-                    <div className="text-center text-white p-8">
-                      <div className="text-6xl mb-4">🔍</div>
-                      <p className="text-lg font-semibold">赤外線画像</p>
-                      <p className="text-sm mt-2">青い部分が雨水蓄積箇所</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工前
-                  </div>
+              <div className="relative">
+                <img 
+                  src={caseABeforeAfter} 
+                  alt="A箱所：階段明り取りサッシの施工前後比較" 
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  左：施工前（赤外線）
                 </div>
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                    <div className="text-center text-green-800 p-8">
-                      <div className="text-6xl mb-4">✅</div>
-                      <p className="text-lg font-semibold">施工後</p>
-                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工後
-                  </div>
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  右：施工後（目視）
                 </div>
               </div>
               <div className="p-8">
@@ -501,30 +494,17 @@ function App() {
 
             {/* B画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-orange-200 to-yellow-100 flex items-center justify-center">
-                    <div className="text-center text-orange-800 p-8">
-                      <div className="text-6xl mb-4">🦠</div>
-                      <p className="text-lg font-semibold">カビ発生確認</p>
-                      <p className="text-sm mt-2">壁内雨水蓄積（目視不可）</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工前
-                  </div>
+              <div className="relative">
+                <img 
+                  src={caseBBeforeAfter} 
+                  alt="B箱所：壁内部の雨水蓄積の施工前後比較" 
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  左：施工前（赤外線）
                 </div>
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                    <div className="text-center text-green-800 p-8">
-                      <div className="text-6xl mb-4">✅</div>
-                      <p className="text-lg font-semibold">施工後</p>
-                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工後
-                  </div>
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  右：施工後（目視）
                 </div>
               </div>
               <div className="p-8">
@@ -544,30 +524,17 @@ function App() {
 
             {/* C画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-gray-400 to-gray-600 flex items-center justify-center">
-                    <div className="text-center text-white p-8">
-                      <div className="text-6xl mb-4">🏗️</div>
-                      <p className="text-lg font-semibold">鉄骨伝いの雨水</p>
-                      <p className="text-sm mt-2">構造部材への水分浸透</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工前
-                  </div>
+              <div className="relative">
+                <img 
+                  src={caseCBeforeAfter} 
+                  alt="C箱所：鉄骨構造部の雨水蓄積の施工前後比較" 
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  左：施工前（赤外線）
                 </div>
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                    <div className="text-center text-green-800 p-8">
-                      <div className="text-6xl mb-4">✅</div>
-                      <p className="text-lg font-semibold">施工後</p>
-                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工後
-                  </div>
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  右：施工後（目視）
                 </div>
               </div>
               <div className="p-8">
@@ -587,30 +554,17 @@ function App() {
 
             {/* D画像事例 */}
             <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-              <div className="grid grid-cols-1 lg:grid-cols-2">
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-purple-200 to-purple-300 flex items-center justify-center">
-                    <div className="text-center text-purple-800 p-8">
-                      <div className="text-6xl mb-4">🧱</div>
-                      <p className="text-lg font-semibold">ALC内雨水蓄積</p>
-                      <p className="text-sm mt-2">軽量コンクリート内部浸水</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工前
-                  </div>
+              <div className="relative">
+                <img 
+                  src={caseDBeforeAfter} 
+                  alt="D箱所：ALC（軽量コンクリート）内部の施工前後比較" 
+                  className="w-full h-auto object-contain"
+                />
+                <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  左：施工前（赤外線）
                 </div>
-                <div className="relative">
-                  <div className="w-full h-80 lg:h-96 bg-gradient-to-br from-green-100 to-green-50 flex items-center justify-center">
-                    <div className="text-center text-green-800 p-8">
-                      <div className="text-6xl mb-4">✅</div>
-                      <p className="text-lg font-semibold">施工後</p>
-                      <p className="text-sm mt-2">雨水は消滅し異常温度なし</p>
-                    </div>
-                  </div>
-                  <div className="absolute top-4 left-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold">
-                    施工後
-                  </div>
+                <div className="absolute top-4 right-4 bg-green-600 text-white px-4 py-2 rounded-full font-bold text-sm">
+                  右：施工後（目視）
                 </div>
               </div>
               <div className="p-8">
