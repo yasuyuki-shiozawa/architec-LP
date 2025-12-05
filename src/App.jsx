@@ -458,11 +458,25 @@ function App() {
               新築から43年間、あらゆる防水工事を実施しても止まらなかった雨漏りを、
               赤外線診断により根本原因を特定し、完全に解決した実際の事例をご紹介します。
             </p>
-            <div className="bg-red-50 border border-red-200 rounded-xl p-6 mt-8 max-w-4xl mx-auto">
-              <p className="text-red-800 font-semibold">
-                建築業者・設計士・現場監督・塗装業者・板金業者など、あらゆる専門業者が対応しても
-                解決できなかった43年間の問題を、赤外線技術で一発解決
-              </p>
+            
+            {/* 43年間の苦労の詳細描写 */}
+            <div className="bg-red-50 border border-red-200 rounded-xl p-8 mt-8 max-w-5xl mx-auto">
+              <h3 className="text-2xl font-bold text-red-800 mb-6 text-center">43年間の長い苦労の歴史</h3>
+              <div className="space-y-4 text-red-800">
+                <p className="font-semibold leading-relaxed">
+                  新築から43年間、あらゆる手を尽くし防水工事を何度も施工。銅で外壁をカバーし、
+                  防水業者を何度も検査させ施工させても雨漏りが止まらず...
+                </p>
+                <p className="leading-relaxed">
+                  建築業者・設計士・現場監督・塗装業者・板金業者など、建築のあらゆる業者に確認させ、
+                  何度も防水施工を行いました。それでも漏水が止められない43年間でした。
+                </p>
+                <div className="bg-white p-4 rounded-lg border border-red-300 mt-6">
+                  <p className="text-red-900 font-bold text-center">
+                    ⬇ そんな43年間の問題を、赤外線技術でたった1回の調査で完全解決 ⬇
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -731,7 +745,73 @@ function App() {
         </div>
       </section>
 
-      {/* 動画セクション */}
+      {/* 青木様インタビュー動画セクション */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-green-100">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-20">
+            <h2 className="text-5xl font-black text-green-900 mb-6">
+              <span className="text-red-600">お客様インタビュー</span>
+              <span className="text-yellow-600">動画</span>
+            </h2>
+            <p className="text-2xl text-green-700 font-semibold">
+              実際に雨漏り問題を解決された青木様にお話を伺いました
+            </p>
+          </div>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white p-8 rounded-xl shadow-2xl">
+              <div className="aspect-w-16 aspect-h-9 mb-8">
+                {/* 動画が提供されたらここにURLを設定 */}
+                <div className="w-full h-96 bg-gray-200 rounded-lg flex items-center justify-center">
+                  <div className="text-center">
+                    <div className="text-6xl text-gray-400 mb-4">🎥</div>
+                    <p className="text-xl text-gray-600 font-semibold">青木様インタビュー動画</p>
+                    <p className="text-gray-500 mt-2">動画の提供をお待ちしております</p>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-2xl font-bold text-green-900 mb-4">インタビューのポイント</h3>
+                  <ul className="space-y-3 text-gray-700">
+                    <li className="flex items-start">
+                      <span className="bg-red-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">1</span>
+                      他社で解決できなかった雨漏りの実態
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-yellow-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">2</span>
+                      アーキテックの赤外線診断での解決過程
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-blue-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">3</span>
+                      完全解決後の安心感と満足度
+                    </li>
+                    <li className="flex items-start">
+                      <span className="bg-green-500 text-white rounded-full w-6 h-6 flex items-center justify-center text-sm font-bold mr-3 mt-0.5">4</span>
+                      2000年開始 25年の実績への信頼と評価
+                    </li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-bold text-green-900 mb-4">青木様プロフィール</h3>
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <div className="font-bold text-lg text-green-900 mb-2">青木 氏</div>
+                    <div className="text-green-700 mb-3">商業ビルオーナー / 神奈川県在住</div>
+                    <p className="text-gray-700 text-sm leading-relaxed">
+                      「他社で3回修理しても止まらなかった雨漏りが、アーキテックさんの
+                      赤外線調査で1回で完全に解決しました。本当に感謝しています。」
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 技術解説動画セクション */}
       <section className="py-20 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
