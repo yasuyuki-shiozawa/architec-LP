@@ -40,9 +40,8 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('フォーム送信:', formData);
-    alert('お問い合わせありがとうございます。担当者より24時間以内にご連絡いたします。');
+    // Netlify Formsが自動処理するため、preventDefault()は不要
+    // フォームデータはNetlifyが自動で処理します
   };
 
   return (
@@ -1115,7 +1114,19 @@ function App() {
               <div className="bg-white p-8 rounded-xl shadow-2xl">
                 <h3 className="text-3xl font-bold text-gray-800 mb-6 text-center">フォームでお問い合わせ</h3>
                 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form 
+                  name="contact" 
+                  method="POST" 
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                  onSubmit={handleSubmit} 
+                  className="space-y-6"
+                >
+                  {/* Netlify Forms用の隠しフィールド */}
+                  <input type="hidden" name="form-name" value="contact" />
+                  <div hidden>
+                    <input name="bot-field" />
+                  </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-gray-700 font-semibold mb-2">お名前 *</label>

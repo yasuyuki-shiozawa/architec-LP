@@ -1,0 +1,12 @@
+# Netlify設定ファイル
+
+[build]
+  publish = "dist"
+  command = "npm run build"
+
+# フォーム送信時のメール通知設定
+[[plugins]]
+  package = "@netlify/plugin-forms"
+
+# メール通知先の設定（Netlify管理画面でも設定可能）
+# architec7@gmail.com にフォーム送信通知が届きます
