@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './App.css';
 
 // 画像のインポート
@@ -20,6 +20,56 @@ import caseCBeforeAfter from './assets/case_c_before_after.png';
 import caseDBeforeAfter from './assets/case_d_before_after.png';
 
 function App() {
+  // SEOメタタグの設定
+  useEffect(() => {
+    // ページタイトル
+    document.title = '雨漏り赤外線調査｜神奈川県央地区専門｜25年の実績で確実解決 - アーキテック';
+    
+    // メタディスクリプション
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', '神奈川県央地区で雨漏りにお困りですか？2000年開始25年の実績を持つアーキテックが、0.04℃単位の精密な赤外線調査で原因を特定。他社で止められなかった雨漏りも確実に解決します。無料赤外線調査実施中。');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'description';
+      meta.content = '神奈川県央地区で雨漏りにお困りですか？2000年開始25年の実績を持つアーキテックが、0.04℃単位の精密な赤外線調査で原因を特定。他社で止められなかった雨漏りも確実に解決します。無料赤外線調査実施中。';
+      document.head.appendChild(meta);
+    }
+    
+    // メタキーワード
+    const metaKeywords = document.querySelector('meta[name="keywords"]');
+    if (metaKeywords) {
+      metaKeywords.setAttribute('content', '雨漏り,赤外線調査,赤外線建築診断,雨漏り修理,神奈川,県央地区,厚木,海老名,相模原,RC造,ALC造,マンション,ビル');
+    } else {
+      const meta = document.createElement('meta');
+      meta.name = 'keywords';
+      meta.content = '雨漏り,赤外線調査,赤外線建築診断,雨漏り修理,神奈川,県央地区,厚木,海老名,相模原,RC造,ALC造,マンション,ビル';
+      document.head.appendChild(meta);
+    }
+    
+    // OGPタグ
+    const ogTitle = document.querySelector('meta[property="og:title"]');
+    if (ogTitle) {
+      ogTitle.setAttribute('content', '雨漏り赤外線調査｜神奈川県央地区専門｜25年の実績で確実解決 - アーキテック');
+    }
+    
+    const ogDescription = document.querySelector('meta[property="og:description"]');
+    if (ogDescription) {
+      ogDescription.setAttribute('content', '神奈川県央地区で雨漏りにお困りですか？2000年開始25年の実績を持つアーキテックが、0.04℃単位の精密な赤外線調査で原因を特定。他社で止められなかった雨漏りも確実に解決します。');
+    }
+    
+    // Twitter Cardタグ
+    const twitterTitle = document.querySelector('meta[name="twitter:title"]');
+    if (twitterTitle) {
+      twitterTitle.setAttribute('content', '雨漏り赤外線調査｜神奈川県央地区専門｜25年の実績で確実解決');
+    }
+    
+    const twitterDescription = document.querySelector('meta[name="twitter:description"]');
+    if (twitterDescription) {
+      twitterDescription.setAttribute('content', '神奈川県央地区で雨漏りにお困りですか？2000年開始25年の実績を持つアーキテックが、0.04℃単位の精密な赤外線調査で原因を特定。');
+    }
+  }, []);
+  
   const [formData, setFormData] = useState({
     name: '',
     company: '',
