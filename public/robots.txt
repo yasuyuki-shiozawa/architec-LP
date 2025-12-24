@@ -1,0 +1,29 @@
+# robots.txt for https://architec-2025.com/
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://architec-2025.com/sitemap.xml
+
+# クロール制限（必要に応じて調整）
+Crawl-delay: 1
+
+# 主要な検索エンジンボット
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
