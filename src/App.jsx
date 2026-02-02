@@ -92,6 +92,15 @@ function App() {
   const handleSubmit = (e) => {
     // Netlify Formsが自動処理するため、preventDefault()は不要
     // フォームデータはNetlifyが自動で処理します
+    
+    // Google Analytics 4 コンバージョンイベント送信
+    if (typeof window.gtag !== 'undefined') {
+      window.gtag('event', 'form_submit', {
+        event_category: 'engagement',
+        event_label: '無料赤外線調査フォーム送信',
+        value: 1
+      });
+    }
   };
 
   return (
