@@ -108,6 +108,29 @@
     
   </head>
   <body>
+    <!-- Netlify Formsのための隠しHTMLフォーム -->
+    <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+      <input type="text" name="name" />
+      <input type="text" name="company" />
+      <input type="tel" name="phone" />
+      <input type="email" name="email" />
+      <input type="text" name="location" />
+      <select name="building-type">
+        <option value="オフィスビル">オフィスビル</option>
+        <option value="商業ビル">商業ビル</option>
+        <option value="マンション">マンション</option>
+        <option value="工場・倉庫">工場・倉庫</option>
+        <option value="その他">その他</option>
+      </select>
+      <select name="urgency">
+        <option value="緊急（雨漏り継続中）">緊急（雨漏り継続中）</option>
+        <option value="早急（近日中に調査希望）">早急（近日中に調査希望）</option>
+        <option value="通常（１週間以内）">通常（１週間以内）</option>
+        <option value="相談のみ">相談のみ</option>
+      </select>
+      <textarea name="message"></textarea>
+    </form>
+    
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
