@@ -90,8 +90,7 @@ function App() {
   };
 
   const handleSubmit = (e) => {
-    // Netlify Formsが自動処理するため、preventDefault()は不要
-    // フォームデータはNetlifyが自動で処理します
+    e.preventDefault();
     
     // Google Analytics 4 コンバージョンイベント送信
     if (typeof window.gtag !== 'undefined') {
@@ -101,7 +100,23 @@ function App() {
         value: 1
       });
     }
-  };
+    
+    // Netlify Formsにデータを送信
+    const form = e.target;
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(() => {
+      alert('お問い合わせありがとうございます！\n後ほど担当者よりご連絡させていただきます。');
+      form.reset();
+    })
+    .catch((error) => {
+      alert('送信に失敗しました。もう一度お試しください。');
+      console.error('Form submission error:', error);
+    });
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
