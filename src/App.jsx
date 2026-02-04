@@ -150,11 +150,11 @@ function App() {
               {/* メインタイトル - 最大サイズ */}
               <div className="space-y-4">
                 <h1 className="text-5xl lg:text-6xl font-black text-white leading-tight drop-shadow-2xl">
-                  他社で
-                  <span className="text-yellow-300">止められなかった</span>
+                  <span className="text-yellow-300">大和市・相模原市・藤沢市</span>
                   <br />
-                  ビルの雨漏りを
-                  <span className="text-red-300">解決</span>
+                  他社で止められなかった
+                  <br />
+                  <span className="text-red-300">ビルの雨漏り修理</span>を解決
                 </h1>
                 
                 {/* サブタイトル - 中サイズ */}
@@ -188,9 +188,9 @@ function App() {
                 <div className="bg-blue-200 text-blue-800 px-6 py-3 rounded-full shadow-lg transform hover:scale-105 transition-transform">
                   <div className="flex items-center space-x-2">
                     <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zm0 4a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zm8 0a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1h-6a1 1 0 01-1-1v-6z" clipRule="evenodd" />
+                      <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" />
                     </svg>
-                    <span className="font-bold text-lg">県央地区専門</span>
+                    <span className="font-bold text-lg">神奈川県央地区対応</span>
                   </div>
                 </div>
               </div>
@@ -229,7 +229,7 @@ function App() {
                 <div className="relative z-10">
                   <img 
                     src={mascotMain} 
-                    alt="赤外線建築診断の専門キャラクター" 
+                    alt="大和市・相模原市・藤沢市でビルの雨漏り修理を行う赤外線建築診断の専門キャラクター" 
                     className="w-full h-auto rounded-lg max-w-sm mx-auto"
                   />
                   <div className="text-center mt-4">
@@ -330,7 +330,7 @@ function App() {
             <div>
               <img 
                 src={thermal1T} 
-                alt="赤外線調査による雨漏り箇所の特定" 
+                alt="ビルの雨漏り修理のための赤外線調査による雨漏り箇所の特定" 
                 className="w-full h-auto rounded-xl shadow-2xl"
               />
             </div>
@@ -416,7 +416,7 @@ function App() {
             <div>
               <img 
                 src={thermal2S} 
-                alt="ドローンによる安全で効率的な調査" 
+                alt="ビルの雨漏り修理のためのドローンによる安全で効率的な調査" 
                 className="w-full h-auto rounded-xl shadow-2xl"
               />
             </div>
@@ -559,7 +559,7 @@ function App() {
               <div className="relative">
                 <img 
                   src={caseABeforeAfter} 
-                  alt="A箱所：階段明り取りサッシの施工前後比較" 
+                  alt="ビルの雨漏り修理事例：A箱所・階段明り取りサッシの施工前後比較" 
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
@@ -589,7 +589,7 @@ function App() {
               <div className="relative">
                 <img 
                   src={caseBBeforeAfter} 
-                  alt="B箱所：壁内部の雨水蓄積の施工前後比較" 
+                  alt="ビルの雨漏り修理事例：B箱所・壁内部の雨水蓄積の施工前後比較" 
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
@@ -619,7 +619,7 @@ function App() {
               <div className="relative">
                 <img 
                   src={caseCBeforeAfter} 
-                  alt="C箱所：鉄骨構造部の雨水蓄積の施工前後比較" 
+                  alt="ビルの雨漏り修理事例：C箱所・鉄骨構造部の雨水蓄積の施工前後比較" 
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
@@ -649,7 +649,7 @@ function App() {
               <div className="relative">
                 <img 
                   src={caseDBeforeAfter} 
-                  alt="D箱所：ALC（軽量コンクリート）内部の施工前後比較" 
+                  alt="ビルの雨漏り修理事例：D箱所・ALC（軽量コンクリート）内部の施工前後比較" 
                   className="w-full h-auto object-contain"
                 />
                 <div className="absolute top-4 left-4 bg-red-600 text-white px-4 py-2 rounded-full font-bold text-sm">
@@ -1139,8 +1139,63 @@ function App() {
         </div>
       </section>
 
-      {/* 問い合わせフォームセクション */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-blue-900 to-blue-800">
+      {/* 対応エリアセクション */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl lg:text-5xl font-black text-gray-800 mb-6 leading-tight">
+              <span className="text-blue-600">対応エリア</span>
+            </h2>
+            <p className="text-xl text-gray-600 font-semibold">
+              神奈川県央地区を中心に、幅広く対応しております
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-10 rounded-2xl shadow-xl">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+                {[
+                  { city: "大和市", icon: "🏛️" },
+                  { city: "相模原市", icon: "🏙️" },
+                  { city: "藤沢市", icon: "🌊" },
+                  { city: "座間市", icon: "🏡" },
+                  { city: "綾瀬市", icon: "🌳" },
+                  { city: "海老名市", icon: "🦐" },
+                  { city: "厚木市", icon: "⛰️" },
+                  { city: "その他周辺地域", icon: "🗺️" }
+                ].map((area, index) => (
+                  <div key={index} className="bg-white p-6 rounded-xl shadow-lg text-center transform hover:scale-105 transition-transform">
+                    <div className="text-4xl mb-3">{area.icon}</div>
+                    <div className="font-bold text-lg text-gray-800">{area.city}</div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-lg">
+                <h3 className="text-2xl font-bold text-blue-900 mb-4 text-center">ビルオーナー様へ</h3>
+                <div className="space-y-4 text-gray-700 leading-relaxed">
+                  <p className="text-lg">
+                    <span className="font-bold text-blue-600">大和市・相模原市・藤沢市</span>を中心とした神奈川県央地区で、
+                    オフィスビル・商業ビル・マンションの雨漏り修理を承っております。
+                  </p>
+                  <p>
+                    <span className="font-bold text-red-600">雨漏りは放置すると、資産価値の大幅下落、テナント離れ、構造体の腐食</span>など、
+                    深刻な問題を引き起こします。早期の赤外線調査で、根本原因を特定しましょう。
+                  </p>
+                  <div className="bg-yellow-50 p-4 rounded-lg border border-yellow-200 mt-4">
+                    <p className="font-semibold text-yellow-800 text-center">
+                      ※ 対応エリア外の場合も、お気軽にご相談ください
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* お問い合わせフォームセクション */}
+      <section id="contact" className="py-24 bg-gradient-to-br from-blue-50 to-blue-100">
         <div className="container mx-auto px-6">
           <div className="text-center mb-20">
             <h2 className="text-5xl font-black text-white mb-6">
